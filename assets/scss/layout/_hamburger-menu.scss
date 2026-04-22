@@ -1,0 +1,144 @@
+@use "../global" as g;
+
+/*!
+layout > hamburger-menu
+------------------------------
+*/
+
+.l-hamburger-menu-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: var(--z-index-modal);
+    @include g.mq(md) {
+        display: none;
+    }
+}
+
+.l-hamburger-menu-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rem 20rem;
+}
+
+.l-hamburger-menu-button {
+    width: 64rem;
+    height: 64rem;
+    background-color: var(--color-bg-base);
+    position: relative;
+    margin-left: auto;
+
+    @include g.mq(md) {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        display: inline-block;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 23.7rem;
+        height: 1rem;
+        background-color: var(--color-font-base);
+    }
+    span:nth-child(1) {
+        top: 16rem;
+        rotate: -37deg;
+    }
+    span:nth-child(2) {
+        top: 31rem;
+        rotate: 40deg;
+    }
+    &::after {
+        content: "CLOSE";
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--color-font-base);
+        font-family: var(--font-family-en);
+        font-size: 12rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+}
+
+.l-hamburger-menu-content {
+    padding: 0 20rem;
+}
+
+.l-hamburger-menu-list {
+    margin-top: 32rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+}
+
+.l-hamburger-menu-item {
+    color: var(--color-font-base);
+    a {
+        display: inline-flex;
+        align-items: center;
+        width: 243rem;
+        height: 100%;
+    }
+}
+
+.l-hamburger-menu-item-text-en {
+    font-family: var(--font-family-en);
+    font-size: 24rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+.l-hamburger-menu-item-text-ja {
+    font-size: 14rem;
+    line-height: 1.7;
+    margin-left: 8rem;
+}
+
+.l-hamburger-menu-button-entry {
+    margin-top: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18rem 32rem 14rem 32rem;
+    border-radius: 56rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-image 0.3s;
+    border: 1rem solid var(--color-bg-base);
+
+    &__text-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    &__text-en {
+        font-size: 24rem;
+        font-family: var(--font-family-en);
+        line-height: 1.7;
+        color: var(--color--white);
+    }
+    &__text-ja {
+        font-size: 14rem;
+        line-height: 1.7;
+        color: var(--color--white);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 11.58rem;
+        height: 20rem;
+        background-image: url(../img/button/button_arrow-right-white.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+}

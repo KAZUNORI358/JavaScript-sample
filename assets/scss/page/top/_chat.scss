@@ -1,0 +1,95 @@
+@use "../../global" as g;
+
+/*!
+page > top > chat
+------------------------------
+*/
+
+.chat-frame {
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    max-width: 300px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: var(--font-family-base);
+
+}
+
+.chat-log {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* メッセージの共通スタイル */
+.msg {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ボットの吹き出し */
+.msg-bot {
+    align-self: flex-start;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 2px;
+}
+
+/* 自分の吹き出し */
+.msg-user {
+    align-self: flex-end;
+    background: #007bff;
+    color: #fff;
+    border-bottom-right-radius: 2px;
+}
+
+/* 選択肢ボタン */
+.options-container {
+    padding: 10px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.options-container button {
+    padding: 4px 8px;
+    border: 1px solid #007bff;
+    background: #fff;
+    color: #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 14px;
+
+    @media (any-hover:hover) {
+        &:hover {
+            background: #007bff;
+            color: #fff;
+        }
+    }
+}

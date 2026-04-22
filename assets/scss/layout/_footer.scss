@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+.l-footer {
+    padding: 56rem 0;
+}
+
+.l-footer-text {
+    font-size: 14rem;
+    line-height: 1.7;
+    text-align: right;
+}
+

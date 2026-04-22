@@ -1,0 +1,138 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-index-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10rem 20rem;
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.l-header-title {
+    margin-left: 20rem;
+    font-size: 24rem;
+    font-weight: 800;
+    line-height: 1.7;
+    font-family: var(--font-family-en);
+    color: var(--color-font-base);
+    @include g.mq(md) {
+        margin-left: 70rem;
+        font-size: 32rem;
+    }
+}
+
+
+.l-header-nav-wrapper {
+    @include g.mq(md) {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 64rem;
+        gap: 64rem;
+    }
+}
+
+.l-header-nav {
+    display: none;
+    @include g.mq(md) {
+        display: block;
+    }
+}
+
+.l-header-list {
+    @include g.mq(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32rem;
+    }
+}
+
+.l-header-item {
+    color: var(--color--black);
+
+    a {
+        display: inline-block;
+        position: relative;
+        padding: 5rem 0;
+        @include g.mq(md) {
+            font-size: 16rem;
+            font-weight: 800;
+            line-height: 1.7;
+            padding: 5rem 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1rem;
+            background-color: var(--color--white);
+            bottom: 0;
+            left: 0;
+            transform: scale(0, 1);
+            transform-origin: center;
+            transition: transform 0.3s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+}
+
+.l-header-menu-button {
+    width: 64rem;
+    height: 64rem;
+    background-color: var(--color-bg-base);
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+
+    @include g.mq(md) {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20rem;
+        height: 1rem;
+        background-color: var(--color-font-base);
+    }
+    span:nth-child(1) {
+        top: 17rem;
+    }
+    span:nth-child(2) {
+        top: 24rem;
+    }
+    span:nth-child(3) {
+        top: 31rem;
+
+        &::after {
+            content: "menu";
+            position: absolute;
+            top: 4rem;
+            left: -9rem;
+            color: var(--color-font-base);
+            font-family: var(--font-family-en);
+            font-size: 12rem;
+            text-transform: uppercase;
+        }
+    }
+}

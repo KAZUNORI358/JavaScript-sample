@@ -1,0 +1,42 @@
+@use "../../global" as g;
+
+/*!
+page > time > time
+------------------------------
+*/
+
+.time {
+    padding-top: 200px;
+    margin-inline: auto;
+    max-width: 600px;
+    height: 100vh;
+}
+.time-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1d221d;
+    text-align: center;
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+
+
+.time-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d221d;
+    text-align: center;
+}
+
+.time-night-only {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}

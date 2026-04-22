@@ -1,0 +1,87 @@
+@use "../../global" as g;
+
+/*!
+page > top > quiz
+------------------------------
+*/
+
+.quiz {
+    padding-top: 120px;
+    margin-inline: auto;
+    max-width: 600px;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 32px auto 0;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.quiz-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d221d;
+    text-align: center;
+}
+
+.quiz-lead {
+    font-size: 16px;
+    color: #1d221d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+/* 選択状態のスタイル */
+.quiz-button-option {
+    background: #e0e0e0;
+}
+
+.quiz-button-option.active {
+    background: #007bff;
+    color: white;
+}
+
+.quiz-button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.quiz-result {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.quiz-result-text {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+}

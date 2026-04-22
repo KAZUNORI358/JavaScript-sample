@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JavaScript集-2</title>
+    <meta name="description" content="JavaScript-Gsap" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- js -->
+    <script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <header class="l-header">
+        <h1 class="l-header-title">
+            <a href="index.html">
+                JavaScript
+            </a>
+        </h1>
+        <div class="l-header-nav-wrapper">
+            <nav class="l-header-nav" aria-label="メニュー">
+                <ul class="l-header-list">
+                    <li class="l-header-item">
+                        <a href="index.html">chatbot</a>
+                    </li>
+                    <li class="l-header-item">
+                        <a href="quiz.html">職種適性診断</a>
+                    </li>
+                    <li class="l-header-item">
+                        <a href="delivery.html">配送可否確認</a>
+                    </li>
+                    <li class="l-header-item">
+                        <a href="calculator.html">費用シミュレーション</a>
+                    </li>
+                    <li class="l-header-item">
+                        <a href="time.html">時間管理</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <section class="calculator">
+            <h2 class="calculator-title">費用シミュレーション</h2>
+            <p class="calculator-lead">お住まいの地域とサービス内容を選択し、<br>費用をシミュレーションします。<br>
+            設定した金額で地域調整費と配送料/出張費を加算します。</p>
+
+            <div class="calculator-input-group">
+                <label for="service" class="calculator-input-label">サービス内容</label>
+                <select id="service" class="js-input-service calculator-input-select">
+                    <option value="" disabled selected>--選択してください--</option>
+                    <option value="50000">簡易クリーニング (¥50,000〜)</option>
+                    <option value="150000">標準リフォーム (¥150,000〜)</option>
+                    <option value="500000">フルパッケージ (¥500,000〜)</option>
+                </select>
+            </div>
+
+            <div class="calculator-input-group">
+                <label for="area" class="calculator-input-label">お住まいの地域</label>
+                <select id="area" class="js-input-area calculator-input-select">
+                    <option value="" disabled selected>--選択してください--</option>
+                    <option value="TOKYO">東京都</option>
+                    <option value="OSAKA">大阪府</option>
+                    <option value="OKINAWA">沖縄県</option>
+                    <option value="DEFAULT">その他地域</option>
+                </select>
+            </div>
+
+            <hr class="calculator-hr">
+
+            <div class="calculator-result-area">
+                <div class="calculator-result-item">
+                    <span>基本料金:</span>
+                    <span class="js-display-base">¥0</span>
+                </div>
+                <div class="calculator-result-item">
+                    <span>地域調整費:</span>
+                    <span class="js-display-adj">¥0</span>
+                </div>
+                <div class="calculator-result-item">
+                    <span>配送料/出張費:</span>
+                    <span class="js-display-ship">¥0</span>
+                </div>
+                <div class="calculator-result-total">
+                    <span>合計見積額:</span>
+                    <span class="js-display-total">¥0</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="l-footer">
+        <div class="l-container">
+            <p class="l-footer-text">
+                &copy; 2026 Kazunori-folio
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

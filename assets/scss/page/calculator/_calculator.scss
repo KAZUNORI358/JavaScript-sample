@@ -1,0 +1,82 @@
+@use "../../global" as g;
+
+/*!
+page > calculator > calculator
+------------------------------
+*/
+
+.calculator {
+    padding-top: 180px;
+    margin-inline: auto;
+    max-width: 600px;
+    height: 100vh;
+}
+
+.calculator-title {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d221d;
+    text-align: center;
+}
+
+.calculator-lead {
+    font-size: 16px;
+    color: #1d221d;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.calculator-input-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.calculator-input-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #666;
+}
+
+.calculator-input-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fafafa;
+}
+
+.calculator-hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 16px 0;
+}
+
+.calculator-result-area {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.calculator-result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}
+
+.calculator-result-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px solid #ddd;
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+}

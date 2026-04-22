@@ -1,0 +1,88 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+.c-title-en {
+    font-family: var(--font-family-en);
+    font-size: 32rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    @include g.mq(md) {
+        font-size: 42rem;
+    }
+}
+
+.c-title-ja {
+    font-size: 14rem;
+    line-height: 1.7;
+    color: var(--color-font-light);
+}
+
+.c-title-type1 {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+}
+
+.c-title-type2 {
+    display: block;
+}
+
+.c-title-type2-ja {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &::before {
+        content: "";
+        height: 1rem;
+        margin-right: 8rem;
+        background-color: var(--color-font-light);
+    }
+}
+
+.c-title-type2-ja--feature {
+    &::before {
+        width: 73rem;
+        @include g.mq(md) {
+            width: 122rem;
+        }
+    }
+}
+.c-title-type2-ja--entry {
+    &::before {
+        width: 34rem;
+        @include g.mq(md) {
+            width: 70rem;
+        }
+    }
+}
+.c-title-type3 {
+    display: block;
+    text-align: center;
+}
+
+.c-title-type3-ja {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    &::before,
+    &::after {
+        content: "";
+        width: 46rem;
+        height: 1rem;
+        background-color: var(--color-font-light);
+        @include g.mq(md) {
+            width: 76rem;
+        }
+    }
+    &::before {
+        margin-right: 8rem;
+    }
+    &::after {
+        margin-left: 8rem;
+    }
+}

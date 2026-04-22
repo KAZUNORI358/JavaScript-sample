@@ -1,0 +1,55 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+    --color--white: #ffffff;
+    --color-font-base: #414f5d;
+    --color-font-light: #919ca7;
+    --color-bg-base: #f5f8f9;
+    --color-bg-entry: #e0ebee;
+    --color-bg-gradient-blue: linear-gradient(
+        174.99deg,
+        #75c2eb 0%,
+        #43cfcf 50%,
+        #4bd2d7 100%
+    );
+    --color-bg-gradient-blue-hover: linear-gradient(
+        174.99deg,
+        #69b7e3 0%,
+        #13aaaa 50%,
+        #21a9b0 100%
+    );
+    --color-bg-gradient-light-blue: linear-gradient(
+        134.57deg,
+        #e4eff9 0%,
+        #e3f3f3 50%,
+        #b6def0 100%
+    );
+
+    --color-bg-gradient-light-blue-hover: linear-gradient(
+        134.57deg,
+        #f0f8ff 0%,
+        #d8f0fa 50%,
+        #b6dcef 100%
+    );
+    --color-bg-gradient-light-green: linear-gradient(
+        134.57deg,
+        #e4f9f8 0%,
+        #e3f3e9 50%,
+        #c8f1c2 100%
+    );
+
+    --color-bg-gradient-light-green-hover: linear-gradient(
+        134.57deg,
+        #f0fcfd 0%,
+        #d8f8f0 50%,
+        #b6ead5 100%
+    );
+
+    --color-bg-header: linear-gradient(
+        0deg,
+        rgba(39, 56, 78, 0) 0%,
+        rgba(39, 56, 78, 0.3) 100%
+    );
+}

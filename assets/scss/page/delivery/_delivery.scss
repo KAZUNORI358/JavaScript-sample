@@ -1,0 +1,85 @@
+@use "../../global" as g;
+
+/*!
+page > delivery > delivery
+------------------------------
+*/
+
+.delivery {
+    padding-top: 200px;
+    margin-inline: auto;
+    max-width: 600px;
+    height: 100vh;
+}
+
+.delivery-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d221d;
+    text-align: center;
+}
+
+.delivery-description {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #1d221d;
+    text-align: center;
+}
+
+.delivery-input-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+
+    input {
+        flex: 1;
+        padding: 13px;
+        border: 1px solid #1d221d;
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+            border-color: #1d221d;
+        }
+    }
+
+    button {
+        padding: 13px 20px;
+        background-color: #d68000;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.delivery-result-message {
+    margin-top: 20px;
+    min-height: 24px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 13px;
+    border-radius: 6px;
+    display: none;
+
+    &.is-success {
+        display: block;
+        background-color: #e0ebee;
+        color: #1d221d;
+        border: 1px solid #1d221d;
+    }
+
+    &.is-error {
+        display: block;
+        background-color: #ffe0e0;
+        color: #1d221d;
+        border: 1px solid #1d221d;
+    }
+}

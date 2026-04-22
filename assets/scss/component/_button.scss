@@ -1,0 +1,189 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+
+.c-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-button-more {
+    padding: 15rem 23rem 13rem 23rem;
+    border-radius: 32rem;
+    border: 1rem solid var(--color-font-base);
+    width: 117rem;
+    transition: scale 0.3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            scale: 1.05;
+        }
+    }
+    @include g.mq(md) {
+        border: 1.5rem solid var(--color-font-base);
+        border-radius: 50%;
+        width: 100rem;
+        height: 100rem;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10rem;
+    }
+
+    &__text {
+        font-size: 14rem;
+        font-weight: 600;
+        line-height: 1;
+        font-family: var(--font-family-en);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 7rem;
+        height: 12rem;
+        background-image: url(../img/button/button_arrow-right.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.c-button-greeting {
+    padding: 15rem 23rem 13rem 23rem;
+    border-radius: 32rem;
+    border: 1rem solid var(--color-font-base);
+    width: 203rem;
+    transition: background-color 0.3s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--color-font-base);
+            color: var(--color--white);
+            &::after {
+                background-image: url(../img/button/button_arrow-right-white.svg);
+            }
+        }
+    }
+
+    @include g.mq(md) {
+        padding: 17rem 31rem;
+        width: 254rem;
+    }
+
+    &__text {
+        font-size: 14rem;
+        font-weight: bold;
+        line-height: 1.7;
+
+        @include g.mq(md) {
+            font-size: 16rem;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 7rem;
+        height: 12rem;
+        background-image: url(../img/button/button_arrow-right.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.c-button-interview {
+    padding: 18rem 32rem;
+    border-radius: 32rem;
+    width: 279rem;
+    background-image: var(--color-bg-gradient-light-blue);
+
+    @include g.mq(md) {
+        padding: 18rem 32rem;
+        width: 304rem;
+    }
+
+    &__text {
+        font-size: 14rem;
+        font-weight: bold;
+        line-height: 1.7;
+
+        @include g.mq(md) {
+            font-size: 16rem;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 7rem;
+        height: 12rem;
+        background-image: url(../img/button/button_arrow-right.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-image: var(--color-bg-gradient-light-blue-hover);
+        }
+    }
+}
+
+.c-button-interview--green {
+    background-image: var(--color-bg-gradient-light-green);
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-image: var(--color-bg-gradient-light-green-hover);
+        }
+    }
+}
+
+.c-button-entry {
+    padding: 18rem 32rem 14rem 32rem;
+    border-radius: 56rem;
+    width: 322.58rem;
+    background-image: var(--color-bg-gradient-blue);
+    transition: background-image 0.3s;
+
+    &__text-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    &__text-en {
+        font-size: 24rem;
+        font-family: var(--font-family-en);
+        line-height: 1.7;
+        color: var(--color--white);
+    }
+    &__text-ja {
+        font-size: 14rem;
+        line-height: 1.7;
+        color: var(--color--white);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 11.58rem;
+        height: 20rem;
+        background-image: url(../img/button/button_arrow-right-white.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-image: var(--color-bg-gradient-blue-hover);
+        }
+    }
+}
