@@ -2,7 +2,7 @@
 
 ## 概要
 
-JavaScriptについてのまとめです。  
+JavaScriptについてのまとめです。<br>
 chatbot、職業診断、配送確認、費用趣味レーション、時間管理について、
 vanilla JavaScriptを用いて実装しました。
 
@@ -13,3 +13,4 @@ vanilla JavaScriptを用いて実装しました。
 ## 公開URL
 
 [javascript2.kazunori-folio.com/](https://javascript2.kazunori-folio.com/)
+
